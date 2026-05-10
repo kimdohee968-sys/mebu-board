@@ -87,13 +87,30 @@ export default function Home() {
       </div>
 
       {/* 카톡 버튼 */}
-      <a
-        href="https://open.kakao.com/o/sZXnG56f"
-        target="_blank"
-        className="fixed bottom-5 right-5 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-5 py-4 rounded-full shadow-lg"
-      >
-        💬 카톡 오픈톡 문의
-      </a>
+      {/* 플로팅 버튼 영역 */}
+<div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
+
+  {/* 단체 오픈톡 */}
+  <a
+    href="https://open.kakao.com/o/g8JqBqLg"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg text-sm font-bold transition"
+  >
+    👥 카톡 단체 오픈톡
+  </a>
+
+  {/* 개인 상담 */}
+  <a
+    href="https://open.kakao.com/o/sZXnG56f"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-3 rounded-full shadow-lg text-sm font-bold transition"
+  >
+    💬 카톡 오픈톡 문의
+  </a>
+
+</div>
 
     </main>
   );
