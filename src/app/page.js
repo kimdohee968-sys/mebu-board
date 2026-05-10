@@ -1,18 +1,6 @@
-console.log("render ok");
-console.log(menuData);
-
 "use client";
 
 import menuData from "../../menus.json";
-import {
-  FaCoins,
-  FaKey,
-  FaGem,
-  FaBox,
-  FaCrown,
-  FaFlask,
-  FaSkull
-} from "react-icons/fa";
 
 export default function Home() {
 
@@ -30,28 +18,15 @@ export default function Home() {
 
   const notice = "저보다 저렴한 곳 있으면 편하게 말씀해주세요.";
 
-  // ✅ 안전 아이콘 매핑 (절대 안 터짐)
-  const getIcon = (icon) => {
-    const iconMap = {
-      coin: <FaCoins className="text-yellow-500 mr-2" />,
-      key: <FaKey className="text-yellow-600 mr-2" />,
-      gem: <FaGem className="text-blue-500 mr-2" />,
-      box: <FaBox className="text-gray-500 mr-2" />,
-      crown: <FaCrown className="text-purple-500 mr-2" />,
-      flask: <FaFlask className="text-green-500 mr-2" />,
-
-      // bone 대체 (FaSkull 사용)
-      bone: <FaSkull className="text-gray-600 mr-2" />
-    };
-
-    return iconMap[icon] || null;
-  };
+  console.log("render ok");
+  console.log(menuData);
 
   return (
     <main className="min-h-screen bg-neutral-100 flex flex-col items-center p-4 text-gray-900">
 
       {/* 타이틀 */}
       <div className="w-full max-w-md md:max-w-2xl text-center py-4">
+
         <h1 className="text-3xl md:text-5xl font-extrabold">
           ☕ 홍홍 카페 ☕
         </h1>
@@ -62,6 +37,7 @@ export default function Home() {
           <span className="bg-blue-300 px-3 py-1 rounded-full">안전 거래</span>
           <span className="bg-gray-300 px-3 py-1 rounded-full">친절 상담</span>
         </div>
+
       </div>
 
       {/* 상담중 */}
@@ -90,9 +66,8 @@ export default function Home() {
               className="border rounded-xl p-4 hover:shadow-lg transition bg-white"
             >
 
-              {/* 이름 + 아이콘 */}
-              <p className="font-bold flex items-center text-gray-900 text-sm md:text-lg">
-                {getIcon(item.icon)}
+              {/* 이름 */}
+              <p className="font-bold text-gray-900 text-sm md:text-lg">
                 {item.name}
               </p>
 
@@ -103,14 +78,19 @@ export default function Home() {
 
               {/* 가격 */}
               <div className="mt-3 space-y-1.5">
+
                 {item.prices.map((p, idx) => (
-                  <div key={idx} className="flex justify-between text-xs md:text-sm">
+                  <div
+                    key={idx}
+                    className="flex justify-between text-xs md:text-sm"
+                  >
                     <span>{p.qty}</span>
                     <span className="font-bold text-blue-600">
                       {p.price}
                     </span>
                   </div>
                 ))}
+
               </div>
 
             </div>
@@ -121,6 +101,7 @@ export default function Home() {
 
       {/* 플로팅 버튼 */}
       <div className="fixed bottom-6 right-4 flex flex-col gap-3">
+
         <a
           href="https://open.kakao.com/o/sZXnG56f"
           className="bg-yellow-400 px-4 py-3 rounded-full font-bold shadow-lg"
@@ -134,6 +115,7 @@ export default function Home() {
         >
           👥 단체 오픈톡
         </a>
+
       </div>
 
     </main>
