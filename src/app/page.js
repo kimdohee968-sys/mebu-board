@@ -90,15 +90,6 @@ export default function Home() {
       {/* 플로팅 버튼 영역 */}
 <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
 
-  {/* 단체 오픈톡 */}
-  <a
-    href="https://open.kakao.com/o/g8JqBqLg"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg text-sm font-bold transition"
-  >
-    👥 카톡 단체 오픈톡
-  </a>
 
   {/* 개인 상담 */}
   <a
@@ -108,6 +99,16 @@ export default function Home() {
     className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-3 rounded-full shadow-lg text-sm font-bold transition"
   >
     💬 카톡 오픈톡 문의
+  </a>
+
+  {/* 단체 오픈톡 */}
+  <a
+    href="https://open.kakao.com/o/g8JqBqLg"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full shadow-lg text-sm font-bold transition"
+  >
+    👥 단체 오픈톡 이동
   </a>
 
 </div>
