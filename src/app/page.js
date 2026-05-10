@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* 🔥 하단 영역 (영업시간 좌측 하단으로 이동) */}
       <div className="w-full max-w-md md:max-w-2xl flex justify-start mt-4 text-xs text-gray-500 px-1">
-        🕒 금일 영업시간 09:00 - 22:00
+        🕒 영업시간: 금일 09:00 - 익일 02:00
       </div>
 
       {/* 카톡 버튼 */}
