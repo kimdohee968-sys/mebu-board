@@ -4,7 +4,7 @@ export default function Home() {
 
   const online = 1 + Math.floor(Math.random() * 3);
 
-  const notice = "저보다 저렴한 곳 있으면, 부담없이 알려주세요.";
+  const notice = "저보다 저렴한 곳 있으면, 부담없이 알려주세요. 감사합니다.";
 
   return (
     <main className="min-h-screen bg-neutral-100 flex flex-col items-center p-4 text-gray-900">
