@@ -1,22 +1,22 @@
 "use client";
 
 import menuData from "../../menus.json";
-
 import {
   FaCoins,
   FaKey,
   FaGem,
   FaBox,
   FaCrown,
-  FaFlask
+  FaFlask,
+  FaSkull
 } from "react-icons/fa";
-
-import { FaSnowflake } from "react-icons/fa6"; // 👈 bone 대체
 
 export default function Home() {
 
+  // 상담중 인원 (안정 확률)
   const getConsultingCount = () => {
     const rand = Math.random();
+
     if (rand < 0.12) return 0;
     if (rand < 0.52) return 1;
     if (rand < 0.83) return 2;
@@ -27,25 +27,21 @@ export default function Home() {
 
   const notice = "저보다 저렴한 곳 있으면 편하게 말씀해주세요.";
 
+  // ✅ 안전 아이콘 매핑 (절대 안 터짐)
   const getIcon = (icon) => {
-    switch (icon) {
-      case "coin":
-        return <FaCoins className="text-yellow-500 mr-2" />;
-      case "key":
-        return <FaKey className="text-yellow-600 mr-2" />;
-      case "gem":
-        return <FaGem className="text-blue-500 mr-2" />;
-      case "box":
-        return <FaBox className="text-gray-500 mr-2" />;
-      case "crown":
-        return <FaCrown className="text-purple-500 mr-2" />;
-      case "flask":
-        return <FaFlask className="text-green-500 mr-2" />;
-      case "snow":
-        return <FaSnowflake className="text-gray-400 mr-2" />;
-      default:
-        return null;
-    }
+    const iconMap = {
+      coin: <FaCoins className="text-yellow-500 mr-2" />,
+      key: <FaKey className="text-yellow-600 mr-2" />,
+      gem: <FaGem className="text-blue-500 mr-2" />,
+      box: <FaBox className="text-gray-500 mr-2" />,
+      crown: <FaCrown className="text-purple-500 mr-2" />,
+      flask: <FaFlask className="text-green-500 mr-2" />,
+
+      // bone 대체 (FaSkull 사용)
+      bone: <FaSkull className="text-gray-600 mr-2" />
+    };
+
+    return iconMap[icon] || null;
   };
 
   return (
@@ -56,6 +52,13 @@ export default function Home() {
         <h1 className="text-3xl md:text-5xl font-extrabold">
           ☕ 홍홍 카페 ☕
         </h1>
+
+        <div className="flex flex-wrap justify-center gap-2 mt-4 text-xs md:text-sm">
+          <span className="bg-yellow-300 px-3 py-1 rounded-full">단골 많음</span>
+          <span className="bg-green-300 px-3 py-1 rounded-full">매일 갱신</span>
+          <span className="bg-blue-300 px-3 py-1 rounded-full">안전 거래</span>
+          <span className="bg-gray-300 px-3 py-1 rounded-full">친절 상담</span>
+        </div>
       </div>
 
       {/* 상담중 */}
@@ -75,23 +78,30 @@ export default function Home() {
 
       {/* 메뉴 */}
       <div className="w-full max-w-md md:max-w-2xl bg-white rounded-2xl shadow p-4 md:p-6">
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
           {menuData.map((item, i) => (
-            <div key={i} className="border rounded-xl p-4 hover:shadow-lg transition">
+            <div
+              key={i}
+              className="border rounded-xl p-4 hover:shadow-lg transition bg-white"
+            >
 
-              <p className="font-bold flex items-center">
+              {/* 이름 + 아이콘 */}
+              <p className="font-bold flex items-center text-gray-900 text-sm md:text-lg">
                 {getIcon(item.icon)}
                 {item.name}
               </p>
 
-              <p className="text-xs text-gray-600 mt-1">
+              {/* 설명 */}
+              <p className="text-xs md:text-sm text-gray-600 mt-1">
                 {item.desc}
               </p>
 
+              {/* 가격 */}
               <div className="mt-3 space-y-1.5">
                 {item.prices.map((p, idx) => (
-                  <div key={idx} className="flex justify-between text-xs">
+                  <div key={idx} className="flex justify-between text-xs md:text-sm">
                     <span>{p.qty}</span>
                     <span className="font-bold text-blue-600">
                       {p.price}
@@ -106,7 +116,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 플로팅 */}
+      {/* 플로팅 버튼 */}
       <div className="fixed bottom-6 right-4 flex flex-col gap-3">
         <a
           href="https://open.kakao.com/o/sZXnG56f"
