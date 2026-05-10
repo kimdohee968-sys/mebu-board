@@ -78,11 +78,11 @@ export default function Home() {
       <div className="w-full max-w-md md:max-w-2xl text-center mb-3">
 
         <p className="text-lg md:text-xl font-bold text-gray-900">
-          2026년 5월 10일 일요일 시세표
+          2026년 5월 11일 월요일 시세표
         </p>
 
         <p className="text-xs md:text-sm text-gray-500 mt-1">
-          마지막 업데이트 23:00
+          마지막 업데이트 08:00
         </p>
 
       </div>
@@ -186,7 +186,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="bg-blue-500 hover:bg-blue-600 text-white px-3 md:px-4 py-2.5 md:py-3 rounded-full shadow-lg text-xs md:text-sm font-bold transition"
         >
-          👥 단체 오픈톡 이동
+          👥 단체 오픈톡 입장
         </a>
 
       </div>
