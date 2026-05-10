@@ -92,7 +92,7 @@ export default function Home() {
         target="_blank"
         className="fixed bottom-5 right-5 bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-5 py-4 rounded-full shadow-lg"
       >
-        💬 카톡 오픈톡 주문
+        💬 카톡 오픈톡 문의
       </a>
 
     </main>
