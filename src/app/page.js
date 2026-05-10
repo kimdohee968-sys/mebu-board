@@ -4,7 +4,7 @@ export default function Home() {
 
   const online = 1 + Math.floor(Math.random() * 3);
 
-  const notice = "저보다 저렴한 곳 있으면 부담없이 말씀해주세요. ";
+  const notice = "저보다 저렴한 곳 있으면 편하게 말씀해주세요. ";
 
   return (
     <main className="min-h-screen bg-neutral-100 flex flex-col items-center p-4 text-gray-900">
@@ -35,7 +35,7 @@ export default function Home() {
       {/* 날짜 */}
       <div className="w-full max-w-md md:max-w-2xl text-center mb-2">
         <p className="text-base md:text-lg font-semibold text-gray-800">
-          2026년 5월 10일 일요일 시세표(11시 30분 기준)
+          2026년 5월 10일 일요일 시세표(14시 00분 갱신)
         </p>
       </div>
 
