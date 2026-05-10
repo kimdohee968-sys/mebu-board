@@ -12,7 +12,7 @@
   },
   {
     "name": "벨리알 껍데기",
-    "icon": "bone",
+    "icon": "snow", 
     "desc": "",
     "prices": [
       { "qty": "100개", "price": "8000원" },

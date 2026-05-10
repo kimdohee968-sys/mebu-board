@@ -1,104 +1,17 @@
 "use client";
 
+import menuData from "../../menus.json";
+
 import {
   FaCoins,
   FaKey,
   FaGem,
   FaBox,
   FaCrown,
-  FaFlask,
-  FaBone
+  FaFlask
 } from "react-icons/fa";
 
-// ✅ JSON 대신 직접 데이터 (에러 #418 방지)
-const menuData = [
-  {
-    "name": "골드",
-    "icon": "coin",
-    "desc": "소지한도 999억",
-    "prices": [
-      { "qty": "100억", "price": "4500원" },
-      { "qty": "300억", "price": "12000원" },
-      { "qty": "500억", "price": "20000원" },
-      { "qty": "900억", "price": "32000원" }
-    ]
-  },
-  {
-    "name": "벨리알 껍데기",
-    "icon": "bone",
-    "desc": "",
-    "prices": [
-      { "qty": "100개", "price": "8000원" },
-      { "qty": "300개", "price": "21000원" },
-      { "qty": "500개", "price": "34000원" }
-    ]
-  },
-  {
-    "name": "상급 소굴열쇠",
-    "icon": "key",
-    "desc": "",
-    "prices": [
-      { "qty": "100개", "price": "4500원" },
-      { "qty": "300개", "price": "8500원" },
-      { "qty": "500개", "price": "13000원" }
-    ]
-  },
-  {
-    "name": "하급 소굴열쇠",
-    "icon": "key",
-    "desc": "",
-    "prices": [
-      { "qty": "100개", "price": "4500원" },
-      { "qty": "300개", "price": "8500원" },
-      { "qty": "500개", "price": "13000원" }
-    ]
-  },
-  {
-    "name": "신화 꾸러미",
-    "icon": "box",
-    "desc": "대기있음(5~15분), 고행1 해금 필수",
-    "prices": [
-      { "qty": "1회", "price": "5500원" },
-      { "qty": "5회", "price": "19000원" },
-      { "qty": "10회", "price": "33000원" }
-    ]
-  },
-  {
-    "name": "웅장한 보석",
-    "icon": "gem",
-    "desc": "종류 섞어서 선택 가능",
-    "prices": [
-      { "qty": "10개", "price": "4500원" },
-      { "qty": "25개", "price": "7500원" },
-      { "qty": "50개", "price": "14500원" },
-      { "qty": "100개", "price": "27500원" }
-    ]
-  },
-  {
-    "name": "우버 룬세트",
-    "icon": "crown",
-    "desc": "각 필요룬 6+6+6=18개",
-    "prices": [
-      { "qty": "영벌", "price": "4500원" },
-      { "qty": "수의", "price": "2500원" },
-      { "qty": "샤코", "price": "2500원" },
-      { "qty": "별반", "price": "4500원" },
-      { "qty": "샐리그", "price": "4500원" },
-      { "qty": "한아비", "price": "3000원" },
-      { "qty": "티리엘", "price": "4500원" }
-    ]
-  },
-  {
-    "name": "잊힌 영혼",
-    "icon": "flask",
-    "desc": "고유템 다수 바닥전달(개별분해 필요)",
-    "prices": [
-      { "qty": "1000개", "price": "11000원" },
-      { "qty": "5000개", "price": "50000원" },
-      { "qty": "10000개", "price": "90000원" }
-    ]
-  }
-];
+import { FaSnowflake } from "react-icons/fa6"; // 👈 bone 대체
 
 export default function Home() {
 
@@ -128,8 +41,8 @@ export default function Home() {
         return <FaCrown className="text-purple-500 mr-2" />;
       case "flask":
         return <FaFlask className="text-green-500 mr-2" />;
-      case "bone":
-        return <FaBone className="text-gray-600 mr-2" />;
+      case "snow":
+        return <FaSnowflake className="text-gray-400 mr-2" />;
       default:
         return null;
     }
@@ -143,13 +56,6 @@ export default function Home() {
         <h1 className="text-3xl md:text-5xl font-extrabold">
           ☕ 홍홍 카페 ☕
         </h1>
-
-        <div className="flex flex-wrap justify-center gap-2 mt-4 text-xs md:text-sm">
-          <span className="bg-yellow-300 px-3 py-1 rounded-full">단골 많음</span>
-          <span className="bg-green-300 px-3 py-1 rounded-full">매일 갱신</span>
-          <span className="bg-blue-300 px-3 py-1 rounded-full">안전 거래</span>
-          <span className="bg-gray-300 px-3 py-1 rounded-full">친절 상담</span>
-        </div>
       </div>
 
       {/* 상담중 */}
@@ -202,13 +108,17 @@ export default function Home() {
 
       {/* 플로팅 */}
       <div className="fixed bottom-6 right-4 flex flex-col gap-3">
-        <a href="https://open.kakao.com/o/sZXnG56f"
-          className="bg-yellow-400 px-4 py-3 rounded-full font-bold shadow-lg">
+        <a
+          href="https://open.kakao.com/o/sZXnG56f"
+          className="bg-yellow-400 px-4 py-3 rounded-full font-bold shadow-lg"
+        >
           💬 개인 상담
         </a>
 
-        <a href="https://open.kakao.com/o/g8JqBqLg"
-          className="bg-blue-500 text-white px-4 py-3 rounded-full font-bold shadow-lg">
+        <a
+          href="https://open.kakao.com/o/g8JqBqLg"
+          className="bg-blue-500 text-white px-4 py-3 rounded-full font-bold shadow-lg"
+        >
           👥 단체 오픈톡
         </a>
       </div>
