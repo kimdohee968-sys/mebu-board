@@ -64,7 +64,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 px-3 py-2 text-center w-fit">
 
           <p className="text-red-400 text-[9px]">
-            현재 상담중
+            상담중
           </p>
 
           <p className="font-semibold text-lg text-gray-800 animate-pulse">
