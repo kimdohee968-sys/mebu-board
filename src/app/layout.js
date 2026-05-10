@@ -21,7 +21,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "홍홍파케 디4 시세표",
     description: "실시간 시세 확인",
-    images: ["https://mebu-board.vercel.app/hongcafe.png"],
+    images: ["https://mebu-board.vercel.app/honghong.png"],
   },
 }
 
