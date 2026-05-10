@@ -37,7 +37,7 @@ const online = getConsultingCount();
       {/* 상담중 */}
       <div className="w-full max-w-md md:max-w-2xl flex justify-end mb-3">
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 px-3 py-2 text-center w-fit">
-          <p className="text-gray-400 text-[10px]">상담중</p>
+          <p className="text-red-400 text-[9px]">현재 상담중</p>
           <p className="font-semibold text-lg text-gray-800">{online}명</p>
         </div>
       </div>
