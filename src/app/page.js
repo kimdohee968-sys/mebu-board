@@ -1,17 +1,32 @@
 "use client";
 
 import menuData from "../../menus.json";
-import { FaCoins, FaKey, FaGem, FaBox, FaCrown, FaFlask } from "react-icons/fa";
+import {
+  FaCoins,
+  FaKey,
+  FaGem,
+  FaBox,
+  FaCrown,
+  FaFlask,
+  FaBone
+} from "react-icons/fa";
 
 export default function Home() {
 
-  // 상담중 인원 (자연스러운 확률)
+  // 상담중 인원 (더 자연스러운 체감 분포)
   const getConsultingCount = () => {
     const rand = Math.random();
 
-    if (rand < 0.20) return 0;
-    if (rand < 0.65) return 1;
-    if (rand < 0.90) return 2;
+    // 0명 (가끔만)
+    if (rand < 0.12) return 0;
+
+    // 1명 (가장 흔함)
+    if (rand < 0.52) return 1;
+
+    // 2명 (적당히 자주)
+    if (rand < 0.83) return 2;
+
+    // 3명 (가끔)
     return 3;
   };
 
@@ -40,6 +55,9 @@ export default function Home() {
 
       case "flask":
         return <FaFlask className="text-green-500 mr-2" />;
+
+      case "bone":
+        return <FaBone className="text-gray-600 mr-2" />;
 
       default:
         return null;
@@ -72,7 +90,9 @@ export default function Home() {
 
         <div className="bg-white rounded-lg shadow-sm border px-3 py-2 text-center">
 
-          <p className="text-red-400 text-[9px]">상담중</p>
+          <p className="text-red-400 text-[9px]">
+            상담중
+          </p>
 
           <p className="font-semibold text-lg text-gray-800 animate-pulse">
             {online}명
@@ -113,7 +133,7 @@ export default function Home() {
               className="border rounded-xl p-4 md:p-5 hover:shadow-lg hover:-translate-y-1 transition"
             >
 
-              {/* 메뉴 이름 + 아이콘 */}
+              {/* 이름 + 아이콘 */}
               <p className="font-bold text-sm md:text-lg flex items-center text-gray-900">
 
                 {getIcon(item.icon)}
