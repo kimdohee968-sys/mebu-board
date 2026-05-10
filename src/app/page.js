@@ -2,7 +2,17 @@ import menuData from "../../menus.json";
 
 export default function Home() {
 
-  const online = 1 + Math.floor(Math.random() * 3);
+  const getConsultingCount = () => {
+  const rand = Math.random();
+
+  if (rand < 0.45) return 0;
+  if (rand < 0.80) return 1;
+  if (rand < 0.95) return 2;
+
+  return 3;
+};
+
+const online = getConsultingCount();
 
   const notice = "저보다 저렴한 곳 있으면 편하게 말씀해주세요. ";
 
