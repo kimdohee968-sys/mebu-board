@@ -1,3 +1,6 @@
+console.log("render ok");
+console.log(menuData);
+
 "use client";
 
 import menuData from "../../menus.json";
