@@ -35,7 +35,7 @@ export default function Home() {
       {/* 날짜 */}
       <div className="w-full max-w-md md:max-w-2xl text-center mb-2">
         <p className="text-base md:text-lg font-semibold text-gray-800">
-          2026년 5월 10일 일요일 시세표
+          2026년 5월 10일 일요일 시세표(11시 30분 기준)
         </p>
       </div>
 
