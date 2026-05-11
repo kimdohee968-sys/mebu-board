@@ -82,7 +82,7 @@ export default function Home() {
         </p>
 
         <p className="text-xs md:text-sm text-gray-500 mt-1">
-          마지막 업데이트 21:00
+          마지막 업데이트 22:00
         </p>
 
       </div>
