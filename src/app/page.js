@@ -82,7 +82,7 @@ export default function Home() {
         </p>
 
         <p className="text-xs md:text-sm text-gray-500 mt-1">
-          - 최근 가격 업데이트 시각: 오전 10:00 -
+          - 최근 가격 업데이트 시각: 오후 14:00 -
         </p>
 
       </div>
