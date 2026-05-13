@@ -78,11 +78,11 @@ export default function Home() {
       <div className="w-full max-w-md md:max-w-2xl text-center mb-3">
 
         <p className="text-lg md:text-xl font-bold text-gray-900">
-          2026년 5월 12일 화요일 시세표
+          2026년 5월 13일 수요일 시세표
         </p>
 
         <p className="text-xs md:text-sm text-gray-500 mt-1">
-          - 최근 시세 반영 시각: 오후 11:00 -
+          - 최근 시세 반영 시각: 오전 11:00 -
         </p>
 
       </div>
