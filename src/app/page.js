@@ -24,7 +24,7 @@ export default function Home() {
   const online = getConsultingCount();
 
   const notice =
-    "저보다 저렴한 곳 있으면 편하게 말씀해주세요.";
+    "저보다 저렴한 곳 있으면 말씀해주세요, 무조건 빼드립니다.";
 
   return (
     <main className="min-h-screen bg-neutral-100 flex flex-col items-center p-4 text-gray-900">
@@ -82,7 +82,7 @@ export default function Home() {
         </p>
 
         <p className="text-xs md:text-sm text-gray-500 mt-1">
-          - 최근 시세 반영 시각: 오후 01:00 -
+          - 최근 시세 반영 시각: 오후 07:00 -
         </p>
 
       </div>
