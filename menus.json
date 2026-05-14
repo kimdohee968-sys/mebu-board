@@ -36,9 +36,7 @@
     "icon": "snow", 
     "desc": "",
     "prices": [
-      { "qty": "100개", "price": "" },
-      { "qty": "300개", "price": "" },
-      { "qty": "500개", "price": "" }
+      { "qty": "100개", "price": "16000" }
     ]
   },
   {
