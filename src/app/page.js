@@ -82,7 +82,7 @@ export default function Home() {
         </p>
 
         <p className="text-xs md:text-sm text-gray-500 mt-1">
-          - 최근 시세 반영 시각: 오후 02:00 -
+          - 최근 시세 반영 시각: 오후 07:00 -
         </p>
 
       </div>
